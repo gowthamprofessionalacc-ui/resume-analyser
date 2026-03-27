@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+frontend/.next/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Environment variables (API KEYS - NEVER commit)
+.env
+.env.local
+.env.production
+backend/.env
+frontend/.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Temp files
+*.log
+.claude/
+package-lock.json
