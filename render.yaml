@@ -1,5 +1,5 @@
 services:
-  # Backend - FastAPI
+  # Backend - FastAPI (Frontend is deployed on Vercel)
   - type: web
     name: resume-analyser-api
     runtime: python
@@ -22,22 +22,3 @@ services:
       - key: ADZUNA_APP_KEY
         sync: false
     healthCheckPath: /health
-
-  # Frontend - Next.js
-  - type: web
-    name: resume-analyser-frontend
-    runtime: node
-    region: oregon
-    plan: free
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
-    envVars:
-      - key: NODE_VERSION
-        value: "20"
-      - key: NEXT_PUBLIC_API_URL
-        sync: false
-      - key: NEXT_PUBLIC_SUPABASE_URL
-        sync: false
-      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
-        sync: false
